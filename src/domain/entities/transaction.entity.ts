@@ -6,14 +6,14 @@ export interface Transaction {
     reference: string | null,
     currency: string,
     amount: number,
-    transactionDate: string
+    transactionDate: Date
 }
 
 
 interface category {
     id: string,
     name: string,
-    color: string
+    color: string | null
 }
 
 interface account {
