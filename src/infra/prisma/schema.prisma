@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Accounts {
+  id     String       @db.Uuid() @id @default(uuid())
+  name         String        @db.VarChar(255)
+  
+  // Relations
+  transactions Transactions[]
+  
+  // Indexes: 
+  @@index([name])
+}
+
+model Categories {
+  id   String         @db.Uuid() @id @default(uuid()) 
+  name         String         @db.VarChar(255)
+  color        String?        @db.Char(6)
+  
+  // Relations
+  transactions Transactions[]
+}
+
+model Transactions {
+  id   String      @db.Uuid() @id @default(uuid())
+  accountId       String      @db.Uuid()
+  currency        String      @db.Char(3)
+  amount          Float
+  date            DateTime
+  description     String?
+  categoryId      String?     @db.Uuid()
+  reference       String?     @db.VarChar(255)
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @default(now())
+
+  // Relations
+  account         Accounts    @relation(fields: [accountId], references: [id])
+  category        Categories? @relation(fields: [categoryId], references: [id])
+
+  // Indexes: 
+  @@index([accountId])
+  @@index([date])
+}
