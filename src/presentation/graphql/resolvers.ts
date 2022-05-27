@@ -1,11 +1,11 @@
-import { TrnsactionServices } from "@/data/services";
+import { filterParams } from "@/types";
 import { GraphQLScalarType } from "graphql";
 import { GraphQLContext } from "./types";
 
 export const resolversGraphQL = {
     Query: {
-        getAllTransactions: async (_: any, args: { page?: number, from?: string, to?: string, account?: string }, context: GraphQLContext) => {
-            return context.transactionServices.getAllTransactions(args.page, args.from, args.to, args.account);
+        getAllTransactions: async (_: any, args: filterParams, context: GraphQLContext) => {
+            return await context.transactionServices.getAllTransactions(args);
         }
     },
 

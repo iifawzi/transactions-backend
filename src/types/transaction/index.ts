@@ -1,0 +1,1 @@
+export type filterParams = { page?: number, from?: string, to?: string, account?: string }

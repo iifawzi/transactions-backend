@@ -1,5 +1,6 @@
 import { Transaction } from "@/domain/entities";
+import { filterParams } from "@/types";
 
 export interface TransactionUseCases {
-    getAllTransactions(page?: number, from?: string, to?: string, account?: string): Promise<Transaction[]>
+    getAllTransactions(filters: filterParams): Promise<Transaction[]>
 }

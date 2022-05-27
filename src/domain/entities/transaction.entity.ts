@@ -1,8 +1,8 @@
 export interface Transaction {
     id: string,
-    account: string,
+    account: Account,
     description: string | null,
-    category: category | null,
+    category: Category | null,
     reference: string | null,
     currency: string,
     amount: number,
@@ -10,13 +10,13 @@ export interface Transaction {
 }
 
 
-interface category {
+interface Category {
     id: string,
     name: string,
     color: string | null
 }
 
-interface account {
+interface Account {
     id: string,
     name: string
 }

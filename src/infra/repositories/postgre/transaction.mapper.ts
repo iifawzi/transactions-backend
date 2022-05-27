@@ -18,7 +18,7 @@ class TransactionMapper extends DataMapper<postgreeTransaction, Transaction> {
         return {
             id: obj.id,
             transactionDate: obj.date,
-            account: obj.account.name,
+            account: obj.account,
             description: obj.description || null,
             category: obj.category || null,
             reference: obj.reference || null,

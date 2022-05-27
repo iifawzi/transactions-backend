@@ -7,7 +7,7 @@ import path from 'path';
 
 
 const transactionRepository = new TransactionPostgreRepository();
-const transactionService = new TrnsactionServices(transactionRepository);
+const transactionServices = new TrnsactionServices(transactionRepository);
 
 export const apolloServer = new ApolloServer({
     typeDefs: readFileSync(path.join(__dirname, 'schema.graphql'), 'utf8'),
@@ -15,7 +15,7 @@ export const apolloServer = new ApolloServer({
     introspection: process.env.NODE_ENV !== 'production',
     context() {
         return {
-            transactionService
+            transactionServices
         }
     }
 })

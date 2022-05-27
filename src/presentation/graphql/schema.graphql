@@ -6,11 +6,23 @@ type Query {
 
 type Transaction {
     id: ID
-    account: String
+    account: Account
     description: String
-    category: String
+    category: Category
     reference: String
     currency: String
     amount: Float
     transactionDate: Date
+}
+
+
+type Category {
+    id: ID
+    name: String
+    color: String
+}
+
+type Account {
+    id: ID
+    name: String
 }

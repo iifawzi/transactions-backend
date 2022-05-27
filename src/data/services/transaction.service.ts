@@ -1,5 +1,6 @@
 import { Transaction } from "@/domain/entities";
 import { TransactionUseCases } from "@/domain/useCases";
+import { filterParams } from "@/types";
 import { TransactionRepository } from "../contracts";
 
 export class TrnsactionServices implements TransactionUseCases {
@@ -15,7 +16,7 @@ export class TrnsactionServices implements TransactionUseCases {
      * @param account The account name
      * @returns Promise<Transaction[]>
      */
-    async getAllTransactions(page?: number, from?: string, to?: string, account?: string): Promise<Transaction[]> {
-        return await this.transactionRepository.getAllTransactions(page, from, to, account);
+    async getAllTransactions(filters: filterParams): Promise<Transaction[]> {
+        return await this.transactionRepository.getAllTransactions(filters);
     }
 }

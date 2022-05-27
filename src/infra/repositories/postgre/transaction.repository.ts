@@ -1,6 +1,7 @@
 import { TransactionRepository } from "@/data/contracts";
 import { Transaction } from "@/domain/entities";
 import { Prisma } from "@/infra/prisma";
+import { filterParams } from "@/types";
 import { transactionMapper } from "./transaction.mapper";
 
 export class TransactionPostgreRepository implements TransactionRepository {
@@ -13,7 +14,7 @@ export class TransactionPostgreRepository implements TransactionRepository {
      * @param account The account name
      * @returns Promise<Transaction[]>
      */
-    public async getAllTransactions(page?: number, from?: string, to?: string, account?: string): Promise<Transaction[]> {
+    public async getAllTransactions({ page, from, to, account }: filterParams): Promise<Transaction[]> {
         const limit = 20;
         const pageNumber = page ? page : 1;
         const skip = limit * (pageNumber - 1);
