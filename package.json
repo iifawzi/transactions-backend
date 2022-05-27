@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prepareDatabase": "npx prisma migrate dev --name initTables --schema ./src/infra/prisma/schema.prisma",
     "start": "ts-node src/server.ts"
   },
   "keywords": [],
