@@ -1,0 +1,16 @@
+scalar Date
+
+type Query {
+  getAllTransactions(page: Int, from: String, to: String, account: String): [Transaction]
+}
+
+type Transaction {
+    id: ID
+    account: String
+    description: String
+    category: String
+    reference: String
+    currency: String
+    amount: Float
+    transactionDate: Date
+}
