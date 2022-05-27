@@ -1,8 +1,8 @@
 # Transactions
-Time is money, save both. 
+Time is money, save both.
 
 ## Goal 
-This is an implementation of a simple backend system, to save time, money of the future improvements!
+This is an implementation of a simple backend system, to save thetime and the money of the future improvements!
 Building a system following the Domain driven design techniques might take some time at first,
 but you couldn't imagine how this can help you in the future! because what really matters 
 is not the framework or the database we're currently using, but the use cases. The logic that makes
@@ -65,10 +65,10 @@ I will try to explain the responsibiliy of each one in short.
 ## Installation
 
 - ### Manual Setup: 
-If you have a postgre instance in your device, you can just change the uri of the database from the env variables then: 
+You must have a postgre instance in your device, then you can just change the URI of the database at the env file and
+the `src/infra/seed.sh` file, then: 
   - `npm install`
   - `npm run prepareDatabase`
   - `npm run start`
-Ane enjoy!
-
-- ### Too lazy? Docker is the solution then: 
+<br/>
+And enjoy!
