@@ -8,18 +8,18 @@ Building a system following the Domain driven design techniques might take some 
 but you couldn't imagine how this can help you in the future! What really matters in the end,
 is not the framework or the database we're currently using, but instead, the `use cases`. 
 
-The use cases is the logic that makes our program do what is it supposed to do. if our program is coupled, tied to a external 
-resource, like a database for example, when that resource changes, we've got to change our entire code including the core logic!
-which can be a huge mess. 
+The use cases is the logic that makes our program do what it's supposed to do. if our program is coupled, tied to a external 
+resource, like a database for example, then when that resource changes, we would need to hange our entire code including the core logic!
+which's a huge mess that could be avodied.
 
-The goal is to make it simple and clear, the `use cases` (bussiness needs) is the most important layer
+The goal is to make it simple and clear, the `use cases` (bussiness needs / domain ) is the most important layer
 and it must be independent from anything else, all the concrete details can be built on top of that layer.
 By following this, whenever you want to change any resource of your infrastructure or the presentation, 
 like the db, or whether we should use REST or GraphQL for example, you wouldn't need to change anything related to the domain, 
 and the changes will be just a matter of some new files, that will not affect the core bussiness logic, Thanks to the abstractions!
 
 
-What are these layers of abstractions? 
+What are the other layers of abstractions? 
 I will try to explain the responsibiliy of each one in short. 
 
 - ### Domain
