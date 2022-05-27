@@ -1,7 +1,7 @@
 scalar Date
 
 type Query {
-  getAllTransactions(page: Int, from: String, to: String, account: String): [Transaction]
+  getAllTransactions(page: Int, account: String, to: String, from: String,): [Transaction]
 }
 
 type Transaction {

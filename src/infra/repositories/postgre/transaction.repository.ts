@@ -41,7 +41,7 @@ export class TransactionPostgreRepository implements TransactionRepository {
         if (from) {
             filterQuery = {
                 date: {
-                    lte: new Date(from),
+                    gte: new Date(from),
                 }
             }
         }
@@ -49,7 +49,7 @@ export class TransactionPostgreRepository implements TransactionRepository {
             filterQuery = {
                 date: {
                     ...filterQuery?.date,
-                    gt: new Date(to),
+                    lt: new Date(to),
                 }
             }
         }
