@@ -15,14 +15,15 @@ export class TransactionPostgreRepository implements TransactionRepository {
         const limit = 20;
         const pageNumber = page ? page : 1;
         const skip = limit * (pageNumber - 1);
+        const filter = this.prepareFilterQuery(from, to, account);
         const transactions = await Prisma.transactions.findMany(
             {
                 include: { account: true, category: true },
                 skip,
                 take: limit,
-                where: this.prepareFilterQuery(from, to, account),
+                where: filter,
                 orderBy: {
-                    date: 'desc'
+                    date: filter ? 'asc' : 'desc'
                 }
             });
 
