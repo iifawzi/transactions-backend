@@ -6,7 +6,7 @@ export interface Transaction {
     reference: string | null,
     currency: string,
     amount: number,
-    transactionDate: Date
+    date: Date
 }
 
 

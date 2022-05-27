@@ -12,7 +12,7 @@ type Transaction {
     reference: String
     currency: String
     amount: Float
-    transactionDate: Date
+    date: Date
 }
 
 

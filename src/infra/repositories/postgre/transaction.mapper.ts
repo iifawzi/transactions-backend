@@ -17,7 +17,7 @@ class TransactionMapper extends DataMapper<postgreeTransaction, Transaction> {
     public toDomain(obj: postgreeTransaction): Transaction {
         return {
             id: obj.id,
-            transactionDate: obj.date,
+            date: obj.date,
             account: obj.account,
             description: obj.description || null,
             category: obj.category || null,
