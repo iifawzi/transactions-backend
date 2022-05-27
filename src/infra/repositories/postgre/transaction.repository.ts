@@ -8,11 +8,8 @@ export class TransactionPostgreRepository implements TransactionRepository {
 
     /**
      * 
-     * @param page Page number
-     * @param from The starting date
-     * @param to The end date
-     * @param account The account name
-     * @returns Promise<Transaction[]>
+     * @param filters: filterParams
+     * @returns 
      */
     public async getAllTransactions({ page, from, to, account }: filterParams): Promise<Transaction[]> {
         const limit = 20;

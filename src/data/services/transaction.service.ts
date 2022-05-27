@@ -10,10 +10,7 @@ export class TrnsactionServices implements TransactionUseCases {
 
     /**
      * 
-     * @param page Page number
-     * @param from The starting date
-     * @param to The end date
-     * @param account The account name
+     * @param filters filterParams
      * @returns Promise<Transaction[]>
      */
     async getAllTransactions(filters: filterParams): Promise<Transaction[]> {
