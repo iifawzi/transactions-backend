@@ -2,22 +2,24 @@
 Time is money, save both.
 
 ## Goal 
-This is an implementation of a simple backend system, to save thetime and the money of the future improvements!
+This is an implementation of a simple backend system, to save both, time and money of the future improvements!
+
 Building a system following the Domain driven design techniques might take some time at first,
-but you couldn't imagine how this can help you in the future! because what really matters 
-is not the framework or the database we're currently using, but the use cases. The logic that makes
-our program do what is it supposed to do. So, once our program is coupled, I mean, tied to a external 
-resource, like a database for example, if the resource changes, we've got to change our entire code,
+but you couldn't imagine how this can help you in the future! What really matters in the end,
+is not the framework or the database we're currently using, but instead, the `use cases`. 
+
+The use cases is the logic that makes our program do what is it supposed to do. if our program is coupled, tied to a external 
+resource, like a database for example, when that resource changes, we've got to change our entire code including the core logic!
 which can be a huge mess. 
 
-The goal was to make it simple and clear, the use cases (bussiness needs) is the most important layer
-and it must be independent from anything else, all the concrete details can be built on top of that layer
-by following this, whenever you want to change any resource of your infrastructure or the presentation, 
-like the db, or whether we should use REST or GraphQL you wouldn't need to change anything related to the domain, 
-and this would be just a matter of some new files, that will not affect the deep down layers, thanks to the abstractions. 
+The goal is to make it simple and clear, the `use cases` (bussiness needs) is the most important layer
+and it must be independent from anything else, all the concrete details can be built on top of that layer.
+By following this, whenever you want to change any resource of your infrastructure or the presentation, 
+like the db, or whether we should use REST or GraphQL for example, you wouldn't need to change anything related to the domain, 
+and the changes will be just a matter of some new files, that will not affect the core bussiness logic, Thanks to the abstractions!
 
 
-So, what are these layers? 
+What are these layers of abstractions? 
 I will try to explain the responsibiliy of each one in short. 
 
 - ### Domain
