@@ -58,7 +58,9 @@ export class TransactionPostgreRepository implements TransactionRepository {
             filterQuery = {
                 date: filterQuery?.date,
                 account: {
-                    name: account
+                    name: {
+                        contains: account,
+                    }
                 }
             }
         }
