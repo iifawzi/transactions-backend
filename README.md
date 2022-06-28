@@ -2,7 +2,6 @@
 Time is money, save both.
 
 ## Goal 
-This is an implementation of a simple backend system fulfilling the airbanl challenge, to save both, time and money of the future improvements!
 
 Building a system following the Domain driven design techniques might take some time at first,
 but for real, it will be a deal breaker in the future! What really matters in the end,
